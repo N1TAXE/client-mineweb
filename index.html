@@ -9,6 +9,263 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="modal-cart" class="modal">
+        <div class="modal__wrapper">
+            <div class="modal__close"><use xlink:href="/assets/img/icons.svg#arrow-line"></use></svg></div>
+            <div class="modal__header">
+                Товары в корзине
+            </div>
+            <div class="modal__body">
+                <div class="cart__body">
+                    <div class="row">
+                        <div class="cart__left">
+                            <div class="cart__list">
 
+                            </div>
+                            <div class="cart__total">
+
+                            </div>
+                        </div>
+                        <div class="cart__payment">
+                            <div class="input__group">
+                                <div class="input__item">
+                                    <label for="email">Ваш Email</label>
+                                    <input id="email" name="email" type="email" placeholder="example@email.com" required>
+                                </div>
+                                <div class="input__item">
+                                    <label for="promocode">Промокод</label>
+                                    <input id="promocode" name="promocode" type="text" placeholder="Введите промокод (если есть)">
+                                </div>
+                            </div>
+                            <div class="cart__payment-methods">
+                                <span>Выберите способ оплаты:</span>
+                                <div class="cart__payment-methods-list">
+                                    <div class="cart__payment-methods-item">
+                                        <img src="" alt="">
+                                        <input name="yoomoney" id="method-yoomoney" type="radio">
+                                    </div>
+                                    <div class="cart__payment-methods-item">
+                                        <img src="" alt="">
+                                        <input name="yoomoney" id="method-yoomoney" type="radio">
+                                    </div>
+                                    <div class="cart__payment-methods-item">
+                                        <img src="" alt="">
+                                        <input name="yoomoney" id="method-yoomoney" type="radio">
+                                    </div>
+                                    <div class="cart__payment-methods-item">
+                                        <img src="" alt="">
+                                        <input name="yoomoney" id="method-yoomoney" type="radio">
+                                    </div>
+                                    <div class="cart__payment-methods-item">
+                                        <img src="" alt="">
+                                        <input name="yoomoney" id="method-yoomoney" type="radio">
+                                    </div>
+                                    <div class="cart__payment-methods-item">
+                                        <img src="" alt="">
+                                        <input name="yoomoney" id="method-yoomoney" type="radio">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__checkboxes">
+                                <div class="input__item-checkbox">
+                                    <label for="rules">Согласен с <a href="#">правилами и условиями</a></label>
+                                    <input id="rules" name="rules" type="checkbox" required>
+                                </div>
+                                <div class="input__item-checkbox">
+                                    <label for="prebuy">Сделать предзаказ</label>
+                                    <input id="prebuy" name="prebuy" type="checkbox" required>
+                                </div>
+                                <div class="input__item-checkbox">
+                                    <label for="subscribe">Подписаться на рассылку</label>
+                                    <input id="subscribe" name="subscribe" type="checkbox" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <div class="cart__buttons">
+                    <button>Отмена <use xlink:href="/assets/img/icons.svg#arrow-line"></use></svg></button>
+                    <button>Купить <use xlink:href="/assets/img/icons.svg#arrow-line"></use></svg></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="main-head" class="main__head">
+        <header>
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="header__search">
+
+                    </div>
+                    <div class="header__logotype">
+
+                    </div>
+                    <ul class="header__nav">
+                        <li class="header__nav-item">
+                            <a href="#">Корзина</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">Правила</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">Акции</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">Гарантии</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="container-fluid">
+
+            </div>
+        </div>
+    </section>
+    <section id="main-live" class="main__live">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="livedrop__header">
+                    Последние покупки
+                </div>
+                <ul class="livedrop__list">
+                    <li class="livedrop__list-item">
+                        <img src="" alt="">
+                        <div class="livedrop__list-item-text">
+                            <span class="header">Hypixel</span>
+                            <span class="desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
+                        </div>
+                    </li>
+                    <li class="livedrop__list-item">
+                        <img src="" alt="">
+                        <div class="livedrop__list-item-text">
+                            <span class="header">Hypixel</span>
+                            <span class="desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
+                        </div>
+                    </li>
+                    <li class="livedrop__list-item">
+                        <img src="" alt="">
+                        <div class="livedrop__list-item-text">
+                            <span class="header">Hypixel</span>
+                            <span class="desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
+                        </div>
+                    </li>
+                    <li class="livedrop__list-item">
+                        <img src="" alt="">
+                        <div class="livedrop__list-item-text">
+                            <span class="header">Hypixel</span>
+                            <span class="desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
+                        </div>
+                    </li>
+                    <li class="livedrop__list-item">
+                        <img src="" alt="">
+                        <div class="livedrop__list-item-text">
+                            <span class="header">Hypixel</span>
+                            <span class="desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
+                        </div>
+                    </li>
+                    <li class="livedrop__list-item">
+                        <img src="" alt="">
+                        <div class="livedrop__list-item-text">
+                            <span class="header">Hypixel</span>
+                            <span class="desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
+                        </div>
+                    </li>
+                    <li class="livedrop__list-item">
+                        <img src="" alt="">
+                        <div class="livedrop__list-item-text">
+                            <span class="header">Hypixel</span>
+                            <span class="desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="main-products" class="main__products">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="container-fluid">
+                    <div class="products__header">
+                        Все товары
+                    </div>
+                    <div class="product__topbar">
+                        <ul class="products__categories">
+                            <li><a href="#">Hypixel</a></li>
+                            <li><a href="#">Буст</a></li>
+                            <li><a href="#">Аккаунты</a></li>
+                            <li><a href="#">Ключи</a></li>
+                        </ul>
+                        <ul class="products__sort">
+                            <li class="caregories__dropdown">
+                                <span>Категории <svg class="icn"><use xlink:href="/assets/img/icons.svg#drop-line"></use></svg></span>
+                                <ul class="dropdown-list">
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                Скрыть отсутствующий товар
+                                <input type="checkbox">
+                            </li>
+                            <li class="caregories__dropdown">
+                                <span>Сортировать <svg class="icn"><use xlink:href="/assets/img/icons.svg#drop-line"></use></svg></span>
+                                <ul class="dropdown-list">
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                    <li><a href="#">Hypixel</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="products__list">
+                        <div class="products__list-item">
+                            <img src="" alt="">
+                            <a href="#" class="products__list-item-link">Hypixel <svg class="icn"><use xlink:href="/assets/img/icons.svg#drop-line"></use></svg></a>
+                            <span>Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <footer>
+            <div class="page-content">
+                <div class="footer__header">
+                    Правила & Гарантии
+                    <svg class="icn"><use xlink:href="/assets/img/icons.svg#arrow-line"></use></svg>
+                </div>
+                <span>Мы один из первых магазинов в СНГ, который продаёт свои, новые, лично-зарегистрированные аккаунты, не взломанные, не общие, не чужие, без банов, которые получены без использования черных схем. В этом главное отличие от всех остальных магазинов. Более того, мы единственный магазин, который на 2023 год продаёт новые аккаунты GTA 5  без каких-либо проблем и посредников.</span>
+                <div class="row">
+                    <span>Мы один из первых магазинов в СНГ, который продаёт свои, новые, лично-зарегистрированные аккаунты, не взломанные, не общие, не чужие, без банов, которые получены без использования черных схем. В этом главное отличие от всех остальных магазинов. Более того, мы единственный магазин, который на 2023 год продаёт новые аккаунты GTA 5  без каких-либо проблем и посредников.</span>
+                    <span>Мы один из первых магазинов в СНГ, который продаёт свои, новые, лично-зарегистрированные аккаунты, не взломанные, не общие, не чужие, без банов, которые получены без использования черных схем. В этом главное отличие от всех остальных магазинов. Более того, мы единственный магазин, который на 2023 год продаёт новые аккаунты GTA 5  без каких-либо проблем и посредников.</span>
+                </div>
+                <span>Мы один из первых магазинов в СНГ, который продаёт свои, новые, лично-зарегистрированные аккаунты, не взломанные, не общие, не чужие, без банов, которые получены без использования черных схем. В этом главное отличие от всех остальных магазинов. Более того, мы единственный магазин, который на 2023 год продаёт новые аккаунты GTA 5  без каких-либо проблем и посредников.</span>
+                <div class="footer__bottom">
+                    <div class="footer__copy">
+                        <img src="" alt="">
+                    </div>
+                    <div class="footer__logotype">
+
+                    </div>
+                    <div class="footer__contacts">
+                        <a href="#">diseasedru@yandex.com</a>
+                        <a href="#">@realtyyohni</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
 </body>
 </html>
