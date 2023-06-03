@@ -1,0 +1,25 @@
+.btn {
+  font-family: 'DrukText', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  transition: background-color ease .3s;
+
+  &-md {
+    padding: 16px 48px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &-primary {
+    color: #fff;
+    background-color: $c-green;
+
+    &:hover {
+      background-color: lighten($c-green, 7%);
+    }
+  }
+}

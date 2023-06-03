@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 0;
+
+  &__search {
+    font-family: 'DrukText', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    width: 100%;
+  }
+
+  &__logotype {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__nav {
+    font-family: 'DrukText', sans-serif;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    justify-content: flex-end;
+
+    li {
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 22px;
+        transition: color ease .3s;
+
+        &:hover {
+          color: $c-green;
+        }
+      }
+    }
+  }
+}

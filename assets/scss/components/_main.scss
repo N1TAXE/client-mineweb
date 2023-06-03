@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background-color: #fff;
+  min-width: 340px;
+  color: $c-black;
+  font-family: 'Raleway', sans-serif;
+}
+
+.page-content {
+
+}
+
+.container-fluid {
+  max-width: 1274px;
+  padding-right: 70px;
+  padding-left: 70px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main__head {
+  background-image: url("../images/main__head-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 974px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    h1 {
+      font-family: 'DrukWide', sans-serif;
+      font-size: 4vw;
+      color: #fff;
+      text-align: center;
+      line-height: 150%;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        display: flex;
+        gap: 16px;
+        &.c-green {
+          color: $c-green;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animateFrames {
+  0% {
+    background-position: 0px 0px; /* Первый кадр */
+  }
+  100% {
+    background-position: 0px -4608px; /* Последний кадр (64 * -72) */
+  }
+}
+
+
+.main__live {
+  .livedrop {
+    &__header {
+      font-family: 'DrukWide', sans-serif;
+      text-transform: uppercase;
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      &:after {
+        content: '';
+        background-image: url('../images/flame_seq.png');
+        background-size: cover;
+        width: 64px;
+        height: 64px;
+        animation: animateFrames 1s steps(8) infinite;
+      }
+    }
+    &__list {
+      display: flex;
+      overflow: hidden;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        width: 272px;
+        
+        &-text {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

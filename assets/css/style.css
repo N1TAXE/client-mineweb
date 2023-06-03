@@ -1,7 +1,9 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -339,6 +341,178 @@ textarea {
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+@font-face {
+  font-family: "DrukText";
+  src: url("../fonts/Druk/Druk-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "DrukWide";
+  src: url("../fonts/Druk/Druk-Wide.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.btn {
+  font-family: "DrukText", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  transition: background-color ease 0.3s;
+}
+.btn-md {
+  padding: 16px 48px;
+  font-size: 24px;
+  line-height: 24px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #47CB6C;
+}
+.btn-primary:hover {
+  background-color: #63d382;
+}
+
+body {
+  background-color: #fff;
+  min-width: 340px;
+  color: #1B1C1F;
+  font-family: "Raleway", sans-serif;
+}
+
+.container-fluid {
+  max-width: 1274px;
+  padding-right: 70px;
+  padding-left: 70px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main__head {
+  background-image: url("../images/main__head-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 974px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.main__head-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.main__head-body h1 {
+  font-family: "DrukWide", sans-serif;
+  font-size: 4vw;
+  color: #fff;
+  text-align: center;
+  line-height: 150%;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main__head-body h1 span {
+  display: flex;
+  gap: 16px;
+}
+.main__head-body h1 span.c-green {
+  color: #47CB6C;
+}
+
+@keyframes animateFrames {
+  0% {
+    background-position: 0px 0px; /* Первый кадр */
+  }
+  100% {
+    background-position: 0px -4608px; /* Последний кадр (64 * -72) */
+  }
+}
+.main__live .livedrop__header {
+  font-family: "DrukWide", sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.main__live .livedrop__header:after {
+  content: "";
+  background-image: url("../images/flame_seq.png");
+  background-size: cover;
+  width: 64px;
+  height: 64px;
+  animation: animateFrames 1s steps(8) infinite;
+}
+.main__live .livedrop__list {
+  display: flex;
+  overflow: hidden;
+}
+.main__live .livedrop__list-item {
+  display: flex;
+  align-items: center;
+  width: 272px;
+}
+.main__live .livedrop__list-item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 0;
+}
+.header__search {
+  font-family: "DrukText", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 22px;
+  width: 100%;
+}
+.header__logotype {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logotype a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__nav {
+  font-family: "DrukText", sans-serif;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  justify-content: flex-end;
+}
+.header__nav li a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 22px;
+  transition: color ease 0.3s;
+}
+.header__nav li a:hover {
+  color: #47CB6C;
+}
+
+.modal {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
