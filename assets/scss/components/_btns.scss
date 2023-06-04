@@ -6,7 +6,7 @@
   border: none;
   outline: none;
   text-transform: uppercase;
-  transition: background-color ease .3s;
+  transition: background-color ease .3s, color ease .3s;
 
   &-md {
     padding: 16px 48px;
@@ -20,6 +20,19 @@
 
     &:hover {
       background-color: lighten($c-green, 7%);
+    }
+  }
+  
+  &-transparent {
+    background-color: unset;
+    color: $c-black;
+    
+    &:hover {
+      color: $c-green;
+
+      .icn {
+        fill: $c-green;
+      }
     }
   }
 }

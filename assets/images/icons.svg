@@ -1,0 +1,9 @@
+<svg width="0" height="0" class="hidden">
+    <symbol fill="inherit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="drop-line">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8136 4.27938C17.0919 4.61484 17.0543 5.11988 16.7296 5.40742L9.50384 11.8074C9.21391 12.0642 8.78609 12.0642 8.49616 11.8074L1.27037 5.40742C0.945731 5.11988 0.908134 4.61484 1.1864 4.27938C1.46466 3.94392 1.95341 3.90507 2.27804 4.19261L9 10.1463L15.722 4.19261C16.0466 3.90507 16.5353 3.94392 16.8136 4.27938Z" fill="inherit"/>
+    </symbol>
+
+    <symbol fill="inherit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="linkarrow-solid">
+        <path d="M5.03586 0.677406H0L0 16L15.3404 16L15.3404 10.9502H8.6402L16 3.58849L12.4603 0L5.03586 7.42637V0.677406Z" fill="inherit"/>
+    </symbol>
+</svg>

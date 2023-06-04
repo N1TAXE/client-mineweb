@@ -1,13 +1,48 @@
 @font-face {
   font-family: "DrukText";
-  src: url("../fonts/Druk/Druk-Bold.ttf") format("truetype");
+  src: url("../fonts/Druk/Druk Text Cyrillic/Druk Text Cyr Bold.otf") format("opentype");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "DrukText";
+  src: url("../fonts/Druk/Druk Text Cyrillic/Druk Text Cyr Heavy.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "DrukText";
+  src: url("../fonts/Druk/Druk Text Cyrillic/Druk Text Cyr Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "DrukText";
+  src: url("../fonts/Druk/Druk Text Cyrillic/Druk Text Cyr Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "DrukWide";
-  src: url("../fonts/Druk/Druk-Wide.ttf") format("truetype");
+  src: url("../fonts/Druk/Druk Wide Cyrillic/Druk Wide Cyr Bold.otf") format("opentype");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "DrukWide";
+  src: url("../fonts/Druk/Druk Wide Cyrillic/Druk Wide Cyr Heavy.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "DrukWide";
+  src: url("../fonts/Druk/Druk Wide Cyrillic/Druk Wide Cyr Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
 }
