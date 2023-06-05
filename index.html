@@ -11,7 +11,6 @@
 <body>
     <div id="modal-cart" class="modal">
         <div class="modal__wrapper">
-            <div class="modal__close"><use xlink:href="/assets/img/icons.svg#arrow-line"></use></svg></div>
             <div class="modal__header">
                 Товары в корзине
             </div>
@@ -20,10 +19,53 @@
                     <div class="row">
                         <div class="cart__left">
                             <div class="cart__list">
-
+                                <div class="cart__list-header">
+                                    <span>Товар</span>
+                                    <span>Количество</span>
+                                </div>
+                                <div class="cart__list-products">
+                                    <div class="cart__list-item">
+                                        <span>MVP+ hypixel ne...</span>
+                                        <div class="cart__list-item-input">
+                                            <button type="button" onclick="this.parentNode.querySelector('#product_1').stepDown()">-</button>
+                                            <input id="product_1" type="number" value="2" min="0">
+                                            <button type="button" onclick="this.parentNode.querySelector('#product_1').stepUp()">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart__list-item">
+                                        <span>MVP+ hypixel ne...</span>
+                                        <div class="cart__list-item-input">
+                                            <button type="button" onclick="this.parentNode.querySelector('#product_1').stepDown()">-</button>
+                                            <input id="product_1" type="number" value="2" min="0">
+                                            <button type="button" onclick="this.parentNode.querySelector('#product_1').stepUp()">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart__list-item">
+                                        <span>MVP+ hypixel ne...</span>
+                                        <div class="cart__list-item-input">
+                                            <button type="button" onclick="this.parentNode.querySelector('#product_1').stepDown()">-</button>
+                                            <input id="product_1" type="number" value="2" min="0">
+                                            <button type="button" onclick="this.parentNode.querySelector('#product_1').stepUp()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="cart__total">
-
+                                <div class="cart__total-item">
+                                    <span class="total-title">Количество</span>
+                                    <hr>
+                                    <span class="total-value">13</span>
+                                </div>
+                                <div class="cart__total-item">
+                                    <span class="total-title">Сумма</span>
+                                    <hr>
+                                    <span class="total-value">12000₽</span>
+                                </div>
+                                <div class="cart__total-item">
+                                    <span class="total-title">Скидка</span>
+                                    <hr>
+                                    <span class="total-value">7%</span>
+                                </div>
                             </div>
                         </div>
                         <div class="cart__payment">
@@ -40,44 +82,40 @@
                             <div class="cart__payment-methods">
                                 <span>Выберите способ оплаты:</span>
                                 <div class="cart__payment-methods-list">
-                                    <div class="cart__payment-methods-item">
-                                        <img src="" alt="">
-                                        <input name="yoomoney" id="method-yoomoney" type="radio">
-                                    </div>
-                                    <div class="cart__payment-methods-item">
-                                        <img src="" alt="">
-                                        <input name="yoomoney" id="method-yoomoney" type="radio">
-                                    </div>
-                                    <div class="cart__payment-methods-item">
-                                        <img src="" alt="">
-                                        <input name="yoomoney" id="method-yoomoney" type="radio">
-                                    </div>
-                                    <div class="cart__payment-methods-item">
-                                        <img src="" alt="">
-                                        <input name="yoomoney" id="method-yoomoney" type="radio">
-                                    </div>
-                                    <div class="cart__payment-methods-item">
-                                        <img src="" alt="">
-                                        <input name="yoomoney" id="method-yoomoney" type="radio">
-                                    </div>
-                                    <div class="cart__payment-methods-item">
-                                        <img src="" alt="">
-                                        <input name="yoomoney" id="method-yoomoney" type="radio">
-                                    </div>
+                                    <label class="cart__payment-methods-item">
+                                        <input type="radio" name="method" required value="method-yoomoney">
+                                        <div class="cart__payment-methods-item-bg"></div>
+                                        <svg class="icn"><use xlink:href="/assets/images/icons.svg#payment-yoomoney"></use></svg>
+                                    </label>
+                                    <label class="cart__payment-methods-item">
+                                        <input type="radio" name="method" required value="method-qiwi">
+                                        <div class="cart__payment-methods-item-bg"></div>
+                                        <svg class="icn"><use xlink:href="/assets/images/icons.svg#payment-qiwi"></use></svg>
+                                    </label>
+                                    <label class="cart__payment-methods-item">
+                                        <input type="radio" name="method" required value="method-tether">
+                                        <div class="cart__payment-methods-item-bg"></div>
+                                        <svg class="icn"><use xlink:href="/assets/images/icons.svg#payment-tether"></use></svg>
+                                    </label>
+                                    <label class="cart__payment-methods-item">
+                                        <input type="radio" name="method" required value="method-cards">
+                                        <div class="cart__payment-methods-item-bg"></div>
+                                        <svg class="icn"><use xlink:href="/assets/images/icons.svg#payment-cards"></use></svg>
+                                    </label>
                                 </div>
                             </div>
                             <div class="cart__checkboxes">
                                 <div class="input__item-checkbox">
-                                    <label for="rules">Согласен с <a href="#">правилами и условиями</a></label>
                                     <input id="rules" name="rules" type="checkbox" required>
+                                    <label for="rules">Согласен с <a href="#">правилами и условиями</a></label>
                                 </div>
                                 <div class="input__item-checkbox">
+                                    <input id="prebuy" name="prebuy" type="checkbox">
                                     <label for="prebuy">Сделать предзаказ</label>
-                                    <input id="prebuy" name="prebuy" type="checkbox" required>
                                 </div>
                                 <div class="input__item-checkbox">
+                                    <input id="subscribe" name="subscribe" type="checkbox">
                                     <label for="subscribe">Подписаться на рассылку</label>
-                                    <input id="subscribe" name="subscribe" type="checkbox" required>
                                 </div>
                             </div>
                         </div>
@@ -86,8 +124,8 @@
             </div>
             <div class="modal__footer">
                 <div class="cart__buttons">
-                    <button>Отмена <use xlink:href="/assets/img/icons.svg#arrow-line"></use></svg></button>
-                    <button>Купить <use xlink:href="/assets/img/icons.svg#arrow-line"></use></svg></button>
+                    <button type="button" class="btn btn-transparent cart-button-cancel">Отмена <svg class="icn"><use xlink:href="/assets/images/icons.svg#cross-solid"></use></svg></button>
+                    <button type="button" class="btn btn-transparent cart-button-buy">Купить <svg class="icn"><use xlink:href="/assets/images/icons.svg#linkarrow-solid"></use></svg></button>
                 </div>
             </div>
         </div>
@@ -97,9 +135,9 @@
             <div class="page-content">
                 <div class="container-fluid">
                     <div class="header">
-                        <div class="header__search">
-                            Поиск
-                        </div>
+                        <button class="header__search">
+                            Поиск <svg class="icn"><use xlink:href="/assets/images/icons.svg#search-line"></use></svg>
+                        </button>
                         <div class="header__logotype">
                             <a href="#">
                                 <svg width="79" height="31" viewBox="0 0 79 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +155,7 @@
                         </div>
                         <ul class="header__nav">
                             <li class="header__nav-item">
-                                <a href="#">Корзина</a>
+                                <button onclick="showModal('cart')" type="button">Корзина</button>
                             </li>
                             <li class="header__nav-item">
                                 <a href="#">Правила</a>
@@ -242,7 +280,7 @@
                                     <li><a href="#">Hypixel</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="input__item-checkbox bright">
                                 Скрыть отсутствующий товар
                                 <input type="checkbox">
                             </li>
