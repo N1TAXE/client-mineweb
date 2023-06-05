@@ -394,6 +394,7 @@ textarea {
   outline: none;
   text-transform: uppercase;
   transition: background-color ease 0.3s, color ease 0.3s;
+  text-decoration: none;
 }
 .btn-md {
   padding: 16px 48px;
@@ -490,6 +491,10 @@ textarea {
   border-right: none;
   width: 100%;
   color: white;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
