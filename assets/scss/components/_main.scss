@@ -80,6 +80,10 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   top: -84px;
+  &.subpage {
+    top: 0;
+    margin-top: 80px;
+  }
 
   .livedrop {
     &__header {
@@ -355,6 +359,239 @@ body {
       align-items: center;
       justify-content: center;
       width: 100%;
+    }
+  }
+}
+
+.product {
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      justify-content: space-between;
+      button {
+        background: none;
+        border: none;
+        text-transform: uppercase;
+        font-family: "DrukWide", sans-serif;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: color ease .3s;
+        
+        &:hover {
+          color: $c-green;
+          .icn {
+            fill: $c-green;
+            transform: rotate(180deg);
+          }
+        }
+
+        .icn {
+          width: 32px;
+          height: 32px;
+          transition: fill ease .3s, transform ease .3s;
+        }
+      }
+      hr {
+        padding: 0;
+        margin: 0;
+        width: 14px;
+        height: 48px;
+        background: $c-green;
+        border: none;
+      }
+    }
+
+    &-price {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-family: "DrukWide", sans-serif;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 40px;
+      color: $c-green;
+      span {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 16px;
+        color: $c-black;
+      }
+    }
+
+    &-desc {
+      width: 100%;
+      height: 124px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      overflow-y: auto;
+    }
+
+    &-tabs {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      &-item {
+        font-family: "DrukWide", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        outline: none;
+        padding: 0;
+        cursor: pointer;
+        transition: color ease .3s, font-size ease .3s;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &:hover {
+          color: $c-green;
+          font-size: 24px;
+        }
+
+        &:not(:last-child) {
+          &:after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: $c-black;
+
+          }
+        }
+
+        &.active {
+          font-size: 24px;
+          color: $c-green;
+        }
+      }
+    }
+  }
+  &__page {
+    background-image: url(/assets/images/product_page_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-top: 40px;
+    }
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__media {
+    display: flex;
+    gap: 16px;
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+
+      &-item {
+        height: 6px;
+        width: 16px;
+        background: white;
+        opacity: .25;
+        cursor: pointer;
+        transition: opacity ease .3s;
+        &:hover:not(.active) {
+          opacity: .5;
+        }
+        &.active {
+          width: 32px;
+          opacity: 1;
+        }
+      }
+    }
+
+    &-main {
+      width: 1074px;
+      height: 554px;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+    &-slides {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+
+      img {
+        &.active {
+          opacity: 1;
+          border: 2px solid white;
+        }
+
+        &:hover:not(.active) {
+          opacity: .75;
+        }
+
+        cursor: pointer;
+        width: 186px;
+        height: 98px;
+        opacity: .5;
+        transition: opacity ease .3s;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "DrukWide", sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 32px;
+    color: white;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    span {
+      font-size: 24px;
+      line-height: 24px;
+      color: $c-green;
+    }
+    &-item {
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 24px;
+      line-height: 24px;
+      color: $c-green;
+      span {
+
+      }
     }
   }
 }

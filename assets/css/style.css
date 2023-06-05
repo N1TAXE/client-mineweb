@@ -567,6 +567,10 @@ body {
   position: relative;
   top: -84px;
 }
+.main__live.subpage {
+  top: 0;
+  margin-top: 80px;
+}
 .main__live .livedrop__header {
   font-family: "DrukWide", sans-serif;
   text-transform: uppercase;
@@ -799,6 +803,207 @@ body {
   width: 100%;
 }
 
+.product__details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.product__details-buttons {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  justify-content: space-between;
+}
+.product__details-buttons button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-family: "DrukWide", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: color ease 0.3s;
+}
+.product__details-buttons button:hover {
+  color: #47CB6C;
+}
+.product__details-buttons button:hover .icn {
+  fill: #47CB6C;
+  transform: rotate(180deg);
+}
+.product__details-buttons button .icn {
+  width: 32px;
+  height: 32px;
+  transition: fill ease 0.3s, transform ease 0.3s;
+}
+.product__details-buttons hr {
+  padding: 0;
+  margin: 0;
+  width: 14px;
+  height: 48px;
+  background: #47CB6C;
+  border: none;
+}
+.product__details-price {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "DrukWide", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 40px;
+  color: #47CB6C;
+}
+.product__details-price span {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 16px;
+  color: #1B1C1F;
+}
+.product__details-desc {
+  width: 100%;
+  height: 124px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  overflow-y: auto;
+}
+.product__details-tabs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product__details-tabs-item {
+  font-family: "DrukWide", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color ease 0.3s, font-size ease 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product__details-tabs-item:hover {
+  color: #47CB6C;
+  font-size: 24px;
+}
+.product__details-tabs-item:not(:last-child):after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #1B1C1F;
+}
+.product__details-tabs-item.active {
+  font-size: 24px;
+  color: #47CB6C;
+}
+.product__page {
+  background-image: url(/assets/images/product_page_bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.product__page-body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 40px;
+}
+.product__page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.product__media {
+  display: flex;
+  gap: 16px;
+}
+.product__media-buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+}
+.product__media-buttons-item {
+  height: 6px;
+  width: 16px;
+  background: white;
+  opacity: 0.25;
+  cursor: pointer;
+  transition: opacity ease 0.3s;
+}
+.product__media-buttons-item:hover:not(.active) {
+  opacity: 0.5;
+}
+.product__media-buttons-item.active {
+  width: 32px;
+  opacity: 1;
+}
+.product__media-main {
+  width: 1074px;
+  height: 554px;
+  overflow: hidden;
+  position: relative;
+}
+.product__media-main img {
+  width: 100%;
+}
+.product__media-slides {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.product__media-slides img {
+  cursor: pointer;
+  width: 186px;
+  height: 98px;
+  opacity: 0.5;
+  transition: opacity ease 0.3s;
+}
+.product__media-slides img.active {
+  opacity: 1;
+  border: 2px solid white;
+}
+.product__media-slides img:hover:not(.active) {
+  opacity: 0.75;
+}
+.product__title {
+  font-family: "DrukWide", sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 32px;
+  color: white;
+}
+.product__stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product__stats span {
+  font-size: 24px;
+  line-height: 24px;
+  color: #47CB6C;
+}
+.product__stats-item {
+  font-feature-settings: "pnum" on, "lnum" on;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #47CB6C;
+}
 .header {
   display: flex;
   align-items: center;
