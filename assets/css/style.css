@@ -557,7 +557,7 @@ body {
 }
 @media screen and (max-width: 780px) {
   .main__head-illustration {
-    top: 398px;
+    top: 328px;
     right: 32px;
     width: 296px;
     height: 322px;
@@ -1148,12 +1148,24 @@ body {
   line-height: 24px;
   color: #47CB6C;
 }
+header.show {
+  background: #47CB6C;
+}
+header.show .header__logotype svg path:last-child {
+  fill: #F9F9F9;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 48px 0;
   position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 24px 0;
+  }
 }
 .header__mobile-menu {
   background: none;

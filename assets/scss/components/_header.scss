@@ -1,9 +1,27 @@
+header {
+  &.show {
+    background: $c-green;
+
+    .header__logotype {
+      svg {
+        path:last-child {
+          fill: #F9F9F9;
+        }
+      }
+    }
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 48px 0;
   position: relative;
+  
+  @media screen and (max-width: 1024px) {
+    padding: 24px 0;
+  }
 
   &__mobile-menu {
     background: none;
