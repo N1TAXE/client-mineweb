@@ -3,10 +3,35 @@
   align-items: center;
   justify-content: space-between;
   padding: 48px 0;
+  position: relative;
+
+  &__mobile-menu {
+    background: none;
+    border: none;
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 16px;
+
+    .icn {
+      fill: white;
+      width: 24px;
+      height: 24px;
+    }
+    
+    @media screen and (max-width: 780px) {
+      display: flex;
+    }
+  }
 
   &__search {
     &-wrapper {
       width: 100%;
+      @media screen and (max-width: 780px) {
+        display: none;
+      }
     }
     font-family: 'DrukText', sans-serif;
     color: #fff;
@@ -52,6 +77,10 @@
     gap: 16px;
     width: 100%;
     justify-content: flex-end;
+    
+    @media screen and (max-width: 780px) {
+      display: none;
+    }
 
     li {
       a, button {
