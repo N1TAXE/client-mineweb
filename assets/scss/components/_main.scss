@@ -117,6 +117,9 @@ body {
   &.subpage {
     top: 0;
     margin-top: 80px;
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+    }
   }
 
   .livedrop {
@@ -172,7 +175,7 @@ body {
         img {
           width: 56px;
           height: 56px;
-          @media screen and (max-height: 780px) {
+          @media screen and (max-width: 780px) {
             width: 40px;
             height: 40px;
           }
@@ -184,7 +187,7 @@ body {
           font-size: 18px;
           line-height: 16px;
           transition: color ease .3s;
-          @media screen and (max-height: 780px) {
+          @media screen and (max-width: 780px) {
             font-size: 12px;
             line-height: 12px;
           }
@@ -196,7 +199,7 @@ body {
           max-height: 32px;
           text-overflow: ellipsis;
           overflow: hidden;
-          @media screen and (max-height: 780px) {
+          @media screen and (max-width: 780px) {
             font-size: 12px;
             line-height: 12px;
             max-height: 24px;
@@ -472,11 +475,21 @@ body {
     flex-direction: column;
     gap: 32px;
 
+
+
     &-buttons {
       display: flex;
       align-items: center;
       gap: 48px;
       justify-content: space-between;
+
+      @media screen and (max-width: 1325px) {
+        gap: 16px;
+      }
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
       button {
         background: none;
         border: none;
@@ -489,6 +502,11 @@ body {
         align-items: center;
         gap: 16px;
         transition: color ease .3s;
+        white-space: nowrap;
+
+        @media screen and (max-width: 1225px) {
+          font-size: 25px;
+        }
         
         &:hover {
           color: $c-green;
@@ -511,6 +529,10 @@ body {
         height: 48px;
         background: $c-green;
         border: none;
+
+        @media screen and (max-width: 820px) {
+            display: none;
+        }
       }
     }
 
@@ -523,6 +545,11 @@ body {
       font-size: 44px;
       line-height: 40px;
       color: $c-green;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+
       span {
         font-weight: 600;
         text-transform: uppercase;
@@ -545,6 +572,17 @@ body {
       display: flex;
       align-items: center;
       gap: 16px;
+      white-space: nowrap;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar{
+        appearance: none;
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        display: none;
+      }
 
       &-item {
         font-family: "DrukWide", sans-serif;
@@ -587,7 +625,16 @@ body {
   &__page {
     background-image: url(/assets/images/product_page_bg.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    //background-size: contain;
+    //background-position: center center;
+
+    @media screen and (max-width: 1025px) {
+      background-position: 0 -20%;
+    }
+    @media screen and (max-width: 769px) {
+      background-position: 0 -130%;
+    }
+
 
     &-body {
       display: flex;
@@ -606,6 +653,11 @@ body {
   &__media {
     display: flex;
     gap: 16px;
+    
+    @media screen and (max-width: 768px) {
+      display: block;
+      
+    }
 
     &-buttons {
       display: flex;
@@ -633,8 +685,6 @@ body {
     }
 
     &-main {
-      width: 1074px;
-      height: 554px;
       overflow: hidden;
       position: relative;
 
@@ -647,6 +697,11 @@ body {
       flex-direction: column;
       gap: 15px;
       align-items: center;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        overflow-x: auto;
+      }
 
       img {
         &.active {
@@ -679,10 +734,22 @@ body {
     display: flex;
     align-items: center;
     gap: 16px;
+    white-space: nowrap;
+
+    @media screen and (max-width: 415px){
+      flex-direction: column;
+    }
+
     span {
       font-size: 24px;
       line-height: 24px;
       color: $c-green;
+
+      &:nth-child(2){
+        @media screen and (max-width: 415px){
+          display: none;
+        }
+      }
     }
     &-item {
       font-feature-settings: 'pnum' on, 'lnum' on;
