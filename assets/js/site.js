@@ -1,4 +1,41 @@
 jQuery(function ($) {
+    // При клике на кнопку слайда
+    $('#media-1').attr('style', `background-image: url(${$('#slide-' + 1).attr('src')})`);
+    $('.product__media-buttons-item').click(function() {
+        // Удаляем класс 'active' у всех кнопок слайдов
+        $('.product__media-buttons-item').removeClass('active');
+        // Добавляем класс 'active' только к текущей кнопке слайда
+        $(this).addClass('active');
+
+        // Получаем ID текущего слайда
+        var slideId = $(this).index() + 1;
+
+        // Удаляем класс 'active' у всех слайдов
+        $('.product__media-slides img').removeClass('active');
+        // Добавляем класс 'active' только к текущему слайду
+        $('#slide-' + slideId).addClass('active');
+
+        // Заменяем изображение в основной картинке на текущий слайд
+        $('#media-1').attr('style', `background-image: url(${$('#slide-' + slideId).attr('src')});`);
+    });
+    $('.product__media-slides-item').click(function() {
+        // Удаляем класс 'active' у всех кнопок слайдов
+        $('.product__media-buttons-item').removeClass('active');
+        // Добавляем класс 'active' только к текущей кнопке слайда
+
+        // Получаем ID текущего слайда
+        var slideId = $(this).index() + 1;
+        $('.product__media-buttons-item').eq(slideId - 1).addClass('active');
+
+        // Удаляем класс 'active' у всех слайдов
+        $('.product__media-slides img').removeClass('active');
+        // Добавляем класс 'active' только к текущему слайду
+        $('#slide-' + slideId).addClass('active');
+
+        // Заменяем изображение в основной картинке на текущий слайд
+        $('#media-1').attr('style', `background-image: url(${$('#slide-' + slideId).attr('src')});`);
+    });
+
 function toggleActiveClass() {
     var navElement = document.querySelector('.header__nav');
     var logotypeElement = document.querySelector('.header__logotype');
