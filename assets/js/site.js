@@ -1,16 +1,36 @@
-let menuButton = document.getElementById('mobile-menu');
-let header = document.getElementById('header');
-let mobileMenu = document.getElementById('mobile-menu');
+jQuery(function ($) {
+function toggleActiveClass() {
+    var navElement = document.querySelector('.header__nav');
+    var logotypeElement = document.querySelector('.header__logotype');
+    var headerElement = document.querySelector('.header');
+    var searchWrapperElement = document.querySelector('.header__search-wrapper');
+    var menuIconElement = document.querySelector('.menu-icon');
 
-function toggleMobileMenu() {
-    header.classList.toggle('show');
-    let isVisible = mobileMenu.style.display === 'block';
 
-    if (isVisible) {
-        mobileMenu.style.display = 'none'; // Скрываем меню
-    } else {
-        mobileMenu.style.display = 'block'; // Показываем меню
+    var isNavActive = navElement.classList.contains('active');
+    var isLogotypeActive = logotypeElement.classList.contains('active');
+    var isHeaderActive = headerElement.classList.contains('active');
+    var isSearchWrapperElement = headerElement.classList.contains('active');
+    var isMenuIconElement = headerElement.classList.contains('active');
+
+    if (isNavActive && isLogotypeActive && isHeaderActive && isSearchWrapperElement && isMenuIconElement) {
+        navElement.classList.remove('active');
+        logotypeElement.classList.remove('active');
+        headerElement.classList.remove('active');
+        searchWrapperElement.classList.remove('active');
+        menuIconElement.classList.remove('active');
+    }
+
+    else {
+        navElement.classList.add('active');
+        logotypeElement.classList.add('active');
+        headerElement.classList.add('active');
+        searchWrapperElement.classList.add('active');
+        menuIconElement.classList.add('active');
     }
 }
 
-menuButton.addEventListener('click', toggleMobileMenu);
+var iconMenu = document.querySelector('.menu-icon');
+iconMenu.addEventListener('click', toggleActiveClass);
+
+});
