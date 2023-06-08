@@ -975,7 +975,7 @@ body {
     flex-direction: column;
   }
 }
-.product__details-buttons button {
+.product__details-buttons .product__details-cart {
   background: none;
   border: none;
   text-transform: uppercase;
@@ -990,18 +990,18 @@ body {
   white-space: nowrap;
 }
 @media screen and (max-width: 1225px) {
-  .product__details-buttons button {
+  .product__details-buttons .product__details-cart {
     font-size: 25px;
   }
 }
-.product__details-buttons button:hover {
+.product__details-buttons .product__details-cart:hover {
   color: #47CB6C;
 }
-.product__details-buttons button:hover .icn {
+.product__details-buttons .product__details-cart:hover .icn {
   fill: #47CB6C;
   transform: rotate(180deg);
 }
-.product__details-buttons button .icn {
+.product__details-buttons .product__details-cart .icn {
   width: 32px;
   height: 32px;
   transition: fill ease 0.3s, transform ease 0.3s;
