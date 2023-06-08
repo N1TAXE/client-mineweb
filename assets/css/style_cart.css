@@ -526,21 +526,22 @@ a.cartlequebutton > span:empty{
  }
 
  .b-group-number__input {
-     height: 18px;
-     border: 1px solid #EAECED;
-     width: 18px;
-     margin: 0 10px;
-     color: #000;
-     font-family: DrukWide, sans-serif;
-     font-size: 11px;
-     line-height: 11px;
-     font-weight: 600;
+     color: #47CB6C;
+     background: none;
+     border: none;
+     outline: none;
+     padding: 0;
+     margin: 0;
+     font-family: 'DrukWide', sans-serif;
+     font-size: 24px;
+     line-height: 24px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     height: 40px;
      text-align: center;
-     -webkit-transition: all 0.4s;
-     -o-transition: all 0.4s;
-     transition: all 0.4s;
-     border-radius: 1px;
-     -moz-appearance: textfield;
+     appearance: none;
  }
 
  .b-group-number__input:focus {
