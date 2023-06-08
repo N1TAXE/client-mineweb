@@ -138,9 +138,13 @@
                 <div class="container-fluid">
                     <div class="header">
                         <div class="header__search-wrapper">
-                            <button class="header__search">
+                            <button id="toggle-search" class="header__search">
                                 Поиск <svg class="icn"><use xlink:href="/assets/images/icons.svg#search-line"></use></svg>
                             </button>
+                            <div id="input-search" class="input__item header__search-input hide">
+                                <input type="text" placeholder="Поиск товара...">
+                                <button class="header__search-submit"><svg class="icn"><use xlink:href="/assets/images/icons.svg#linkarrow-solid"></use></svg></button>
+                            </div>
                         </div>
                         <div class="header__logotype">
                             <a href="#">

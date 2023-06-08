@@ -1,4 +1,8 @@
 jQuery(function ($) {
+    $('#toggle-search').click(function () {
+        $(this).toggleClass('hide')
+        $('#input-search').toggleClass('hide')
+    })
     // При клике на кнопку слайда
     $('#media-1').attr('style', `background-image: url(${$('#slide-' + 1).attr('src')})`);
     $('.product__media-buttons-item').click(function() {

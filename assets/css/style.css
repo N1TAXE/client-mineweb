@@ -440,7 +440,8 @@ textarea {
 .input__item {
   position: relative;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   width: 100%;
 }
 .input__item-checkbox {
@@ -1278,6 +1279,26 @@ header.show .header__logotype svg path:last-child {
   border: none;
   transition: color ease 0.3s;
 }
+@media screen and (max-width: 780px) {
+  .header__search-input {
+    padding: 0 32px;
+  }
+}
+.header__search-submit {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.header__search-submit .icn {
+  fill: #47CB6C;
+  transition: fill ease 0.3s, transform ease 0.3s;
+}
+.header__search-submit .icn:hover {
+  transform: rotate(180deg);
+}
+.header__search.hide {
+  display: none;
+}
 .header__search-wrapper {
   width: 100%;
 }
@@ -1285,6 +1306,9 @@ header.show .header__logotype svg path:last-child {
   .header__search-wrapper {
     display: none;
   }
+}
+.header__search-input.hide {
+  display: none;
 }
 .header__search:hover {
   color: #47CB6C;

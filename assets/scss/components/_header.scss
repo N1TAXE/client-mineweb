@@ -45,6 +45,27 @@ header {
   }
 
   &__search {
+    &-input {
+      @media screen and (max-width: 780px) {
+        padding: 0 32px;
+      }
+    }
+    &-submit {
+      background: none;
+      border: none;
+      padding: 0;
+
+      .icn {
+        fill: $c-green;
+        transition: fill ease .3s, transform ease .3s;
+        &:hover {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &.hide {
+      display: none;
+    }
     &-wrapper {
       width: 100%;
       @media screen and (max-width: 780px) {
@@ -64,6 +85,13 @@ header {
     border: none;
 
     transition: color ease .3s;
+
+    &-input {
+      &.hide {
+        display: none;
+      }
+
+    }
 
     &:hover {
       color: $c-green;
