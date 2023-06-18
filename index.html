@@ -293,15 +293,15 @@
                                 Скрыть отсутствующий товар
                                 <input type="checkbox">
                             </li>
-                            <li class="dropdown">
-                                <span>Сортировать <svg class="icn"><use xlink:href="./assets/images/icons.svg#drop-line"></use></svg></span>
+                            <li class="dropdown select">
+                                <span>Сортировать: </span>
+                                <span class="select-title">Без сортировки</span>
+                                <svg class="icn"><use xlink:href="./assets/images/icons.svg#drop-line"></use></svg>
                                 <ul class="dropdown-list">
-                                    <li><a href="#">Hypixel</a></li>
-                                    <li><a href="#">Hypixel</a></li>
-                                    <li><a href="#">Hypixel</a></li>
-                                    <li><a href="#">Hypixel</a></li>
-                                    <li><a href="#">Hypixel</a></li>
-                                    <li><a href="#">Hypixel</a></li>
+                                    <li data-sort="data-rank,asc" class="select-btn active">Без сортировки</li>
+                                    <li data-sort="data-price,asc" class="select-btn active">сначала дешевые</li>
+                                    <li data-sort="data-price,desc" class="select-btn active">сначала дорогие</li>
+                                    <li data-sort="data-popular,desc" class="select-btn active">по популярности</li>
                                 </ul>
                             </li>
                         </ul>

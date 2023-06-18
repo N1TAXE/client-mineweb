@@ -343,7 +343,6 @@ body {
           }
 
           li {
-            padding: 0;
             display: flex;
             width: 100%;
             box-sizing: border-box;
@@ -351,21 +350,18 @@ body {
             &:not(:last-child) {
               border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             }
+            padding: 16px;
+            display: flex;
+            width: 100%;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $c-black;
+            transition: color ease .3s;
+            font-size: 18px;
+            line-height: 16px;
 
-            a {
-              padding: 16px;
-              display: flex;
-              width: 100%;
-              text-decoration: none;
-              text-transform: uppercase;
-              color: $c-black;
-              transition: color ease .3s;
-              font-size: 18px;
-              line-height: 16px;
-
-              &:hover {
-                color: $c-green;
-              }
+            &:hover {
+              color: $c-green;
             }
           }
         }
@@ -428,6 +424,10 @@ body {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        &.null {
+          display: none;
+        }
 
         &:nth-child(n+9) {
           display: none;
