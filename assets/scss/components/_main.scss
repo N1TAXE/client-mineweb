@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   background-color: #fff;
   min-width: 340px;
   color: $c-black;
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
 }
 
 .page-content {
@@ -41,23 +43,37 @@ body {
   position: relative;
 
   &-illustration {
-    position: absolute;
-    width: 572px;
-    height: 620px;
-    right: 172px;
-    top: 414px;
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: -536px;
+      top: 241px;
+      pointer-events: none;
+
+      @media screen and (max-width: 1024px) {
+        right: -269px;
+        top: 147px;
+      }
+      @media screen and (max-width: 780px) {
+        right: 0;
+        top: 169px;
+      }
+    }
+    width: 470px;
+    height: 510px;
     pointer-events: none;
     z-index: -1;
-    
     @media screen and (max-width: 1024px) {
-      top: 256px;
-      right: 0;
+      width: 372px;
+      height: 404px;
     }
     @media screen and (max-width: 780px) {
-      top: 328px;
-      right: 32px;
-      width: 296px;
-      height: 322px;
+      width: 272px;
+      height: 296px;
     }
   }
 
@@ -104,8 +120,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 72px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   top: -84px;
   
@@ -254,7 +268,7 @@ body {
 
 
       li {
-        a {
+        button {
           font-family: 'DrukText', sans-serif;
           text-decoration: none;
           color: $c-black;
@@ -262,6 +276,9 @@ body {
           line-height: 24px;
           text-transform: uppercase;
           transition: color ease .3s, font-size ease .3s;
+          background: none;
+          border: none;
+          padding: 0;
 
           @media screen and (max-width: 1024px) {
             font-size: 16px;
@@ -393,6 +410,16 @@ body {
       gap: 40px;
       grid-gap: 40px;
 
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media screen and (max-width: 780px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 420px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
       &-item {
         display: flex;
         flex-direction: column;
@@ -404,6 +431,18 @@ body {
           max-width: 100%;
           overflow: hidden;
           z-index: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &-wrapper {
+            width: 100%;
+            height: 100%;
+            background-image: url(https://wallpapers.com/images/featured/s2kxfahyg30sob8q.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+          }
 
           img {
             height: 100%;
@@ -421,12 +460,17 @@ body {
             font-family: 'DrukWide', sans-serif;
             font-size: 46px;
             line-height: 40px;
+            @media screen and (max-width: 780px) {
+              font-size: 32px;
+              line-height: 32px;
+              bottom: -4px;
+            }
           }
         }
 
         &-link {
           text-decoration: none;
-          display: flex;
+          display:inline-block;
           align-items: center;
           gap: 8px;
 
@@ -436,12 +480,39 @@ body {
           font-size: 32px;
           line-height: 24px;
 
-          transition: color ease .3s;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
 
-          .icn {
-            width: 24px;
-            height: 24px;
-            transition: transform ease .3s, fill ease .3s;
+          transition: color ease .3s;
+          width: 100%;
+
+          &-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .icn {
+              width: 24px;
+              height: 24px;
+              transition: transform ease .3s, fill ease .3s;
+            }
+            &:hover {
+              .icn {
+                transform: rotate(180deg);
+                fill: $c-green;
+              }
+            }
+          }
+
+
+
+          @media screen and (max-width: 780px) {
+            font-size: 24px;
+            line-height: 16px;
+            .icn {
+              width: 16px;
+              height: 16px;
+            }
           }
 
           &:hover {
@@ -457,6 +528,9 @@ body {
         .desc {
           font-size: 16px;
           line-height: 125%;
+          @media screen and (max-width: 780px) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -624,7 +698,7 @@ body {
     }
   }
   &__page {
-    background-image: url(/assets/images/product_page_bg.png);
+    background-image: url(../images/product_page_bg.png);
     background-repeat: no-repeat;
     //background-size: contain;
     //background-position: center center;
@@ -773,6 +847,36 @@ body {
       span {
 
       }
+    }
+  }
+}
+
+.static {
+  background-image: url("../images/static-page__bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+
+  @media screen and (max-width: 780px) {
+    background-size: 250%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 120px;
+    margin-bottom: 32px;
+
+    h1 {
+      font-family: "DrukWide", sans-serif;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 150%;
     }
   }
 }

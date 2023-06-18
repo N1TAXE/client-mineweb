@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>MineSale - Магазин аккаунтов Minecraft</title>
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/site.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/site.js"></script>
 </head>
 <body>
 <section id="product__page" class="product__page">
@@ -17,9 +17,13 @@
             <div class="container-fluid">
                 <div class="header">
                     <div class="header__search-wrapper">
-                        <button class="header__search">
-                            Поиск <svg class="icn"><use xlink:href="/assets/images/icons.svg#search-line"></use></svg>
+                        <button id="toggle-search" class="header__search">
+                            Поиск <svg class="icn"><use xlink:href="./assets/images/icons.svg#search-line"></use></svg>
                         </button>
+                        <div id="input-search" class="input__item header__search-input hide">
+                            <input type="text" placeholder="Поиск товара...">
+                            <button class="header__search-submit"><svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg></button>
+                        </div>
                     </div>
                     <div class="header__logotype">
                         <a href="#">
@@ -38,7 +42,7 @@
                     </div>
                     <ul class="header__nav">
                         <li class="header__nav-item">
-                            <button onclick="showModal('cart')" type="button">Корзина</button>
+                            <button onclick="showModal('modal-cart')" type="button">Корзина</button>
                         </li>
                         <li class="header__nav-item">
                             <a href="#">Правила</a>
@@ -105,11 +109,9 @@
                             900₽
                         </div>
                         <hr>
-
-                        <button class="product__details-cart">Купить<svg class="icn"><use xlink:href="/assets/images/icons.svg#linkarrow-solid"></use></svg></button>
+                        <button class="product__details-cart">В корзину<svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg></button>
                         <hr>
-                        <button class="btn btn-md btn-primary">В корзину</button>
-
+                        <button class="product__details-cart">Купить<svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg></button>
                     </div>
                 </div>
             </div>
@@ -127,7 +129,7 @@
     <ul class="livedrop__list">
         <li>
             <a href="#" class="livedrop__list-item">
-                <img src="/assets/images/livedrop/livedrop_01.png" alt="">
+                <img src="./assets/images/livedrop/livedrop_01.png" alt="">
                 <div class="livedrop__list-item-text">
                     <span class="livedrop__list-item-header">Hypixel</span>
                     <span class="livedrop__list-item-desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
@@ -136,7 +138,7 @@
         </li>
         <li>
             <a href="#" class="livedrop__list-item">
-                <img src="/assets/images/livedrop/livedrop_02.png" alt="">
+                <img src="./assets/images/livedrop/livedrop_02.png" alt="">
                 <div class="livedrop__list-item-text">
                     <span class="livedrop__list-item-header">Hypixel</span>
                     <span class="livedrop__list-item-desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
@@ -145,7 +147,7 @@
         </li>
         <li>
             <a href="#" class="livedrop__list-item">
-                <img src="/assets/images/livedrop/livedrop_03.png" alt="">
+                <img src="./assets/images/livedrop/livedrop_03.png" alt="">
                 <div class="livedrop__list-item-text">
                     <span class="livedrop__list-item-header">Hypixel</span>
                     <span class="livedrop__list-item-desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
@@ -154,7 +156,7 @@
         </li>
         <li>
             <a href="#" class="livedrop__list-item">
-                <img src="/assets/images/livedrop/livedrop_04.png" alt="">
+                <img src="./assets/images/livedrop/livedrop_04.png" alt="">
                 <div class="livedrop__list-item-text">
                     <span class="livedrop__list-item-header">Hypixel</span>
                     <span class="livedrop__list-item-desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
@@ -163,7 +165,7 @@
         </li>
         <li>
             <a href="#" class="livedrop__list-item">
-                <img src="/assets/images/livedrop/livedrop_05.png" alt="">
+                <img src="./assets/images/livedrop/livedrop_05.png" alt="">
                 <div class="livedrop__list-item-text">
                     <span class="livedrop__list-item-header">Hypixel</span>
                     <span class="livedrop__list-item-desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
@@ -172,7 +174,7 @@
         </li>
         <li>
             <a href="#" class="livedrop__list-item">
-                <img src="/assets/images/livedrop/livedrop_06.png" alt="">
+                <img src="./assets/images/livedrop/livedrop_06.png" alt="">
                 <div class="livedrop__list-item-text">
                     <span class="livedrop__list-item-header">Hypixel</span>
                     <span class="livedrop__list-item-desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
@@ -181,7 +183,7 @@
         </li>
         <li>
             <a href="#" class="livedrop__list-item">
-                <img src="/assets/images/livedrop/livedrop_07.png" alt="">
+                <img src="./assets/images/livedrop/livedrop_07.png" alt="">
                 <div class="livedrop__list-item-text">
                     <span class="livedrop__list-item-header">Hypixel</span>
                     <span class="livedrop__list-item-desc">MVP+ хайпиксель аккаунт с почтой в комплекте...</span>
@@ -197,7 +199,7 @@
                 <div class="footer__wrapper">
                     <div class="footer__header">
                         Правила & Гарантии
-                        <a href="#"><svg class="icn"><use xlink:href="/assets/images/icons.svg#drop-line"></use></svg></a>
+                        <a href="#"><svg class="icn"><use xlink:href="./assets/images/icons.svg#drop-line"></use></svg></a>
                     </div>
                     <span>Мы один из первых магазинов в СНГ, который продаёт свои, новые, лично-зарегистрированные аккаунты, не взломанные, не общие, не чужие, без банов, которые получены без использования черных схем. В этом главное отличие от всех остальных магазинов. Более того, мы единственный магазин, который на 2023 год продаёт новые аккаунты GTA 5  без каких-либо проблем и посредников.</span>
                     <div class="row">
@@ -207,7 +209,7 @@
                     <span>Мы один из первых магазинов в СНГ, который продаёт свои, новые, лично-зарегистрированные аккаунты, не взломанные, не общие, не чужие, без банов, которые получены без использования черных схем. В этом главное отличие от всех остальных магазинов. Более того, мы единственный магазин, который на 2023 год продаёт новые аккаунты GTA 5  без каких-либо проблем и посредников.</span>
                     <div class="footer__bottom">
                         <div class="footer__copy">
-                            <img src="/assets/images/design_copy.png" alt="">
+                            <img src="./assets/images/design_copy.png" alt="">
                         </div>
                         <div class="footer__logotype">
                             <a href="/">
@@ -224,8 +226,8 @@
                             </a>
                         </div>
                         <div class="footer__contacts">
-                            <a href="mailto: diseasedru@yandex.com">diseasedru@yandex.com</a>
-                            <a target="_blank" href="https://t.me/realtyyohni">@realtyyohni</a>
+                            <a href="mailto: diseasedru@yandex.com">diseasedru@yandex.com <svg class="icn"><use xlink:href="./assets/images/icons.svg#mail-solid"></use></svg></a>
+                            <a target="_blank" href="https://t.me/realtyyohni">@realtyyohni <svg class="icn"><use xlink:href="./assets/images/icons.svg#tg-solid"></use></svg></a>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 footer {
-  background-image: url(/assets/images/footer__bg.png);
+  background-image: url(../images/footer__bg.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #040510;
@@ -52,6 +52,38 @@ footer {
 
     &__copy {
       width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      @media screen and (max-width: 780px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      &-leq {
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+        text-transform: uppercase;
+        gap: 8px;
+        color: $c-gray;
+        @media screen and (max-width: 780px) {
+          align-items: center;
+          justify-content: center;
+        }
+        a {
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 600;
+          color: white;
+          text-decoration: none;
+          transition: color ease .3s;
+          &:hover {
+            color: $c-green;
+          }
+        }
+      }
       @media screen and (max-width: 780px) {
         display: flex;
         align-items: center;
@@ -81,9 +113,19 @@ footer {
         line-height: 24px;
         color: white;
         transition: color ease .3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .icn {
+          fill: white;
+        }
 
         &:hover {
           color: $c-green;
+          .icn {
+            fill: $c-green;
+          }
         }
       }
 
