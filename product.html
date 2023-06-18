@@ -9,6 +9,7 @@
     <title>MineSale - Магазин аккаунтов Minecraft</title>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/site.js"></script>
+
 </head>
 <body>
 <section id="product__page" class="product__page">
@@ -94,13 +95,19 @@
                         <img class="product__media-slides-item" id="slide-5" src="https://wallpapercave.com/wp/wp9729810.jpg" alt="">
                     </div>
                 </div>
-                <div class="product__details">
+                <div class="product__details tab">
                     <div class="product__details-tabs">
-                        <button class="product__details-tabs-item active">Описание</button>
-                        <button class="product__details-tabs-item">Активация</button>
-                        <button class="product__details-tabs-item">Системные требования</button>
+                        <button data-btn-tab="description" class="btn-tab product__details-tabs-item active">Описание</button>
+                        <button data-btn-tab="activation" class="btn-tab product__details-tabs-item">Активация</button>
+                        <button data-btn-tab="system" class="btn-tab product__details-tabs-item">Системные требования</button>
                     </div>
-                    <div class="product__details-desc">
+                    <div data-tab="description" class="tab-item product__details-desc open">
+                        Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore sir alar chto Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore sir alar chto Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore
+                    </div>
+                    <div data-tab="activation" class="tab-item product__details-desc">
+                        Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore sir alar chto Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore sir alar chto Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore
+                    </div>
+                    <div data-tab="system" class="tab-item product__details-desc">
                         Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore sir alar chto Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore sir alar chto Lorem ipsum domet sir alar chto to tam ne pomny voobshe Lorem ipsum domet sir alar chto to tam ne pomny voobshe domet sir alar chto Lore
                     </div>
                     <div class="product__details-buttons">
@@ -235,5 +242,6 @@
         </div>
     </footer>
 </section>
+<script src="./assets/js/app.js"></script>
 </body>
 </html>
