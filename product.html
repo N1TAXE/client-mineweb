@@ -12,6 +12,130 @@
 
 </head>
 <body>
+<div data-id="4" data-popup="basket" class="popup">
+    <div data-popup-close="true" class="popup__overlay">
+        <div class="basket popup__window" style="margin-top: 100.5px;">
+            <button data-popup-close="true" class="btn popup__close">
+                <svg class="icn"><use xlink:href="./assets/images/icons.svg#cross-solid"></use></svg>
+            </button>
+            <h2 class="basket__title">Товары в корзине</h2>
+            <form class="basket__form">
+                <div class="basket__wrapper">
+                    <div class="basket__info">
+                        <div class="basket__info-header">
+                            <span class="basket__subtitle basket__info-title--left">Отмеченный товар</span>
+                            <span class="basket__subtitle basket__info-title--right">Количество</span>
+                        </div>
+                        <ul class="list basket__product-list"><li class="basket__product-item" data-price="590.00" data-id="1387325">
+                            <h5 class="basket__game-title">Red Dead Redemption 2 SOCIAL CLUB</h5>
+                            <div class="basket__game-nav">
+                                <button type="button" class="btn basket__btn-number basket__btn-number--decrement">-</button>
+                                <input type="number" name="product-numbers" value="1" class="basket__product-input-number">
+                                <span class="basket__product-number">01</span>
+                                <button type="button" class="btn basket__btn-number basket__btn-number--increment">+</button>
+                            </div>
+                        </li><li class="basket__product-item" data-price="319.00" data-id="1392631">
+                            <h5 class="basket__game-title">Atomic Heart</h5>
+                            <div class="basket__game-nav">
+                                <button type="button" class="btn basket__btn-number basket__btn-number--decrement">-</button>
+                                <input type="number" name="product-numbers" value="1" class="basket__product-input-number">
+                                <span class="basket__product-number">01</span>
+                                <button type="button" class="btn basket__btn-number basket__btn-number--increment">+</button>
+                            </div>
+                        </li></ul>
+                        <ul class="list basket__price-list">
+                            <li class="basket__price-item">
+                                <span class="basket__price-title">Количество</span>
+                                <hr>
+                                <span class="basket__price-number" id="basket-number">x2</span>
+                            </li>
+                            <li class="basket__price-item">
+                                <span class="basket__price-title">Сумма</span>
+                                <hr>
+                                <span class="basket__price-number" id="basket-sum">₽ 909</span>
+                            </li>
+                            <li style="display:none" class="basket__price-item">
+                                <span class="basket__price-title">Скидка</span>
+                                <hr>
+                                <span data-discount="7" class="basket__price-number" id="basket-discount"></span>
+                            </li>
+                            <li class="basket__price-end">
+                                <span class="basket__price-end-title">Всего</span>
+                                <hr>
+                                <span class="basket__price-end-number" id="basket-price">₽ 845.37</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="basket__pay">
+                        <div class="basket__pay-inputs">
+                            <div class="input__item basket__pay-inputs-item--left">
+                                <label for="basket-email" class="basket__pay-input-label">Ваш e-mail</label>
+                                <div class="basket__pay-parent-input">
+                                    <input type="email" name="email" placeholder="Введите email..." class="input basket__pay-input" id="basket-email3">
+                                </div>
+                            </div>
+                            <div class="input__item basket__pay-inputs-item--right">
+                                <label for="promocode" class="basket__pay-input-label">Промокод</label>
+                                <div class="basket__pay-parent-input ">
+                                    <input type="text" id="promocode" name="coupon" placeholder="Промокод..." class="input basket__pay-input coupon_n">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__pay-way">
+                            <span class="basket__subtitle basket__way-title">Выберите способ оплаты</span>
+                            <div class="basket__way-inputs">
+
+
+
+                                <input id="pay-1one-4" type="radio" name="payment1" value="4" class="basket__way-input">
+                                <label for="pay-1one-4" class="basket__way-item">
+                                    <svg class="icn"><use xlink:href="./assets/images/icons.svg#payment-qiwi"></use></svg>                                </label>
+
+
+
+
+
+
+                                <input id="pay-1one-20" type="radio" name="payment1" value="20" class="basket__way-input">
+                                <label for="pay-1one-20" class="basket__way-item">
+                                    <svg class="icn"><use xlink:href="./assets/images/icons.svg#payment-yoomoney"></use></svg>                                </label>
+
+
+
+
+
+
+                                <input id="pay-1one-22" type="radio" name="payment1" value="22" class="basket__way-input">
+                                <label for="pay-1one-22" class="basket__way-item">
+                                    <svg class="icn"><use xlink:href="./assets/images/icons.svg#payment-tether"></use></svg>                                </label>
+
+
+
+                                <input id="pay-1one-709" type="radio" name="payment1" value="20" class="basket__way-input">
+                                <label for="pay-1one-709" class="basket__way-item">
+                                    <svg class="icn"><use xlink:href="./assets/images/icons.svg#payment-cards"></use></svg></label>
+
+                            </div>
+                        </div>
+                        <div class="basket__rules">
+                            <input id="basket-rules" name="rules_accept" type="checkbox" class="basket__input-rule">
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__nav">
+                    <button type="button" data-popup-close="true" class="btn btn-border basket__btn-cancel">
+                        Отмена
+                        <svg class="icn"><use xlink:href="./assets/images/icons.svg#cross-solid"></use></svg>
+                    </button>
+                    <button type="submit" class="btn basket__btn-buy buy_btn_b">
+                        Купить
+                        <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <section id="product__page" class="product__page">
     <header id="header">
         <div class="page-content">
@@ -43,7 +167,7 @@
                     </div>
                     <ul class="header__nav">
                         <li class="header__nav-item">
-                            <button onclick="showModal('modal-cart')" type="button">Корзина</button>
+                            <button data-popup-btn="basket" type="button">Корзина</button>
                         </li>
                         <li class="header__nav-item">
                             <a href="#">Правила</a>
@@ -116,7 +240,7 @@
                             900₽
                         </div>
                         <hr>
-                        <button class="product__details-cart">В корзину<svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg></button>
+                        <button data-id="1400031" data-price="4799.00" data-descr="Выжить — это лишь первый шаг.После биологической катастрофы в Раккун-Сити прошло шесть лет. Агента Леона С. Кеннеди, пережившего те события, отправили на задание по спасению похищенной дочери президента. В попытках отыскать ее он оказывается в укромной европейской деревеньке, где с местными жителями творится что-то не то. Сорвите занавес с этой увлекательной и жуткой истории о смелом герое и познайте жизнь и смерть, ужас и восхищение.Resident Evil 4, настоящий гигант индустрии, возрождается. Вас ждут обновленный игровой процесс, переработанный сюжет и крайне детализированная графика.Вновь переживите кошмар, полностью изменивший жанр ужасов." data-name="Resident Evil 4" class="product__btn-cart product__details-cart">В корзину<svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg></button>
                         <hr>
                         <button class="product__details-cart">Купить<svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg></button>
                     </div>

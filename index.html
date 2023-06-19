@@ -291,23 +291,23 @@
                         <ul class="products__sort">
                             <li class="input__item-checkbox bright">
                                 Скрыть отсутствующий товар
-                                <input type="checkbox">
+                                <input type="checkbox" class="catalog__null-product-check">
                             </li>
                             <li class="dropdown select">
                                 <span>Сортировать: </span>
                                 <span class="select-title">Без сортировки</span>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#drop-line"></use></svg>
-                                <ul class="dropdown-list">
-                                    <li data-sort="data-rank,asc" class="select-btn active">Без сортировки</li>
-                                    <li data-sort="data-price,asc" class="select-btn active">сначала дешевые</li>
-                                    <li data-sort="data-price,desc" class="select-btn active">сначала дорогие</li>
-                                    <li data-sort="data-popular,desc" class="select-btn active">по популярности</li>
+                                <ul class="dropdown-list dropdown__item">
+                                    <li data-sort="data-rank,asc" class="select-btn catalog__sorting-item active">Без сортировки</li>
+                                    <li data-sort="data-price,asc" class="select-btn catalog__sorting-item">сначала дешевые</li>
+                                    <li data-sort="data-price,desc" class="select-btn catalog__sorting-item">сначала дорогие</li>
+                                    <li data-sort="data-popular,desc" class="select-btn catalog__sorting-item">по популярности</li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <div data-tab="hypixel" class="tab-item products__list open">
-                        <div class="products__list-item">
+                    <div data-tab="hypixel" class="tab-item products__list catalog__body open">
+                        <div data-null="true" data-price="79" data-rank="8" data-popular="105" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
@@ -318,7 +318,7 @@
                             </div>
                             <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="79" data-rank="8" data-popular="12" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
@@ -326,9 +326,10 @@
                             <div class="products__list-item-link-wrapper">
                                 <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="3679" data-rank="8" data-popular="32" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
@@ -336,137 +337,151 @@
                             <div class="products__list-item-link-wrapper">
                                 <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="3279" data-rank="64" data-popular="11" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="2379" data-rank="125" data-popular="54" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="5379" data-rank="124" data-popular="2" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="2379" data-rank="32" data-popular="65" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="979" data-rank="3" data-popular="1" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="879" data-rank="8" data-popular="87" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="779" data-rank="8" data-popular="104" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="679" data-rank="8" data-popular="104" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="579" data-rank="8" data-popular="104" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="479" data-rank="8" data-popular="104" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="279" data-rank="8" data-popular="104" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="179" data-rank="8" data-popular="104" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
-                        <div class="products__list-item">
+                        <div data-null data-price="1179" data-rank="8" data-popular="104" data-category="cat_20948"  class="products__list-item catalog__product">
                             <div class="products__list-item-image">
                                 <div class="products__list-item-image-wrapper"></div>
                                 <span class="price">12000₽</span>
                             </div>
                             <div class="products__list-item-link-wrapper">
-                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel</a>
+                                <a href="/client-mineweb/product.html?_ijt=3djkns2dio9rcnp84lo60d203c&_ij_reload=RELOAD_ON_SAVE" class="products__list-item-link">Hypixel asd asd asd asd asd sad asd asd sad asd as asd </a>
                                 <svg class="icn"><use xlink:href="./assets/images/icons.svg#linkarrow-solid"></use></svg>
-                            </div>                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
+                            </div>
+                            <span class="desc">Lorem ipsum dolor sit amet  sit interdum condimentum ultricies.</span>
                         </div>
                     </div>
                     <div data-tab="boost" class="tab-item products__list">
