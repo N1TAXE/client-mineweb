@@ -1,7 +1,7 @@
 footer {
   background-image: url(../images/footer__bg.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: top center;
   background-color: #040510;
 
   .footer {
@@ -14,7 +14,7 @@ footer {
       padding-bottom: 64px;
       
       @media screen and (max-width: 1024px) {
-        padding-top: 124px;
+        padding-top: 228px;
       }
 
       span {

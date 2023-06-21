@@ -3905,8 +3905,8 @@
                 const t = document.querySelectorAll(".catalog__product"),
                     n = document.querySelectorAll('.catalog__product[data-null="true"]'),
                     s = document.querySelectorAll(".catalog__sorting-item"),
-                    i = document.querySelectorAll(".catalog__category-item"),
-                    r = document.querySelector(".catalog__null-product-check");
+                    i = document.querySelectorAll(".catalog__category-item");
+                    // r = document.querySelector(".catalog__null-product-check");
                 let a = "";
 
                 function o(e, t, n) {
@@ -3929,9 +3929,10 @@
                 function l(e, t, n) {
                     return e.insertBefore(t, n.nextSibling)
                 }
-                r.addEventListener("input", (() => {
-                    r.checked ? n.forEach((e => e.classList.add("null"))) : n.forEach((e => e.classList.remove("null")))
-                })), i.forEach((e => {
+                // r.addEventListener("input", (() => {
+                //     r.checked ? n.forEach((e => e.classList.add("null"))) : n.forEach((e => e.classList.remove("null")))
+                // })),
+                    i.forEach((e => {
                     e.addEventListener("click", (() => {
                         e.classList.contains("active") ? (e.classList.remove("active"), t.forEach((e => {
                             e.classList.remove("none")
@@ -4049,7 +4050,9 @@
                     };
                 if (t ? t.find((e => e.id === n.id)) : void 0) return;
                 let s;
-                t ? (s = [...t, n], localStorage.setItem("basketItems", JSON.stringify(s))) : (s = [n], localStorage.setItem("basketItems", JSON.stringify(s)))
+                t ? (s = [...t, n], localStorage.setItem("basketItems", JSON.stringify(s))) : (s = [n], localStorage.setItem("basketItems", JSON.stringify(s)));
+
+                gritterADD('Добавлено', 'Товар в корзине', "growl-success");
             }))
         }(),
         function() {
@@ -4071,7 +4074,9 @@
                     a += e.count, o += +e.price * e.count
                 }));
                 let l = o - o / 100 * +i;
-                e.textContent = `x${a}`, t.textContent = `₽ ${o}`, s.textContent = `₽ ${l}`
+                let d01 = l.toFixed(2);
+
+                e.textContent = `x${a}`, t.textContent = `₽ ${o}`, s.textContent = `₽ ${d01}`
             }
             e.addEventListener("click", (() => {
                 const e = JSON.parse(localStorage.getItem("basketItems"));
@@ -4111,70 +4116,73 @@
             }))
         }(),
         function() {
-            //            const e = document.querySelector(".basket__form");
-            //            e.addEventListener("submit", (async t => {
+            const e = document.querySelector(".basket__form");
+            e.addEventListener("submit", (async t => {
 
 
-            //            	const article = document.querySelector("body");
+                const article = document.querySelector("body");
 
 
 
-            //            	 // var stateOrder = $('body').data('orderWait');
-            // 		if(parseInt(article.dataset.orderWait) == 1){
-            // 			    alert('Подождите....');
-            // 			    return false;
-            // 		}
-            // 		article.dataset.orderWait  = 1;
+                // var stateOrder = $('body').data('orderWait');
+                if(parseInt(article.dataset.orderWait) == 1){
+                    alert('Подождите....');
+                    return false;
+                }
+                article.dataset.orderWait  = 1;
 
-            // 		// $('body').data('orderWait',1);
+                // $('body').data('orderWait',1);
 
-            //                t.preventDefault();
-            //                const n = JSON.parse(localStorage.getItem("basketItems")),
-            //                    s = [],
-            //                    i = e.querySelector("#basket-email").value,
-            //                    r = e.querySelector("#promocode").value,
-            //                    a = e.closest(".popup").dataset.id,
-            //                    o = e.querySelector("#basket-rules"),
-            //                    l = e.querySelectorAll(".basket__way-input");
-            //                let c = 1,
-            //                    d = o.checked ? 1 : 0;
-            //                for (let e = 0; e < l.length; e++) {
-            //                    const t = l[e];
-            //                    t.checked && (c = +t.id.slice(-1))
-            //                }
-            //                for (let e = 0; e < n.length; e++) {
-            //                    const t = n[e],
-            //                        i = {
-            //                            id: t.id,
-            //                            count: t.count
-            //                        };
-            //                    s.push(i)
-            //                }
-            //                const u = new FormData;
-            //                u.append("email", i), u.append("cartItems", JSON.stringify(s)), u.append("type", a), u.append("count", 1), u.append("rules", d), u.append("forms", JSON.stringify({})), u.append("fund", c), u.append("cupon", r),
-            //                await je.post("/order/createcart", u) .then(function (response) {
-            // 		    console.log(response.data);
+                t.preventDefault();
+                const n = JSON.parse(localStorage.getItem("basketItems")),
+                    s = [],
+                    i = e.querySelector("#basket-email").value,
+                    r = e.querySelector("#promocode").value,
+                    a = e.closest(".popup").dataset.id,
+                    o = e.querySelector("#basket-rules"),
+                    s3 = e.querySelector("#prebuy"),
+                    l = e.querySelectorAll(".basket__way-input");
+                let c = 1,
+                    d = o.checked ? 1 : 0,
+                    d2 = s3.checked ? 1 : 0;
 
-            // 		     // var res = JSON.parse(response.data);
-            //                 if (response.data.ok == 'TRUE') {
-            //                     if (response.data.redirect == 'yes') {
-            //                         // $('body').data('orderWait', 0);
-            //                         article.dataset.orderWait  = 0;
+                for (let e = 0; e < l.length; e++) {
+                    const t = l[e];
+                    t.checked && (c = +t.id.slice(-1))
+                }
+                for (let e = 0; e < n.length; e++) {
+                    const t = n[e],
+                        i = {
+                            id: t.id,
+                            count: t.count
+                        };
+                    s.push(i)
+                }
+                const u = new FormData;
+                u.append("email", i), u.append("cartItems", JSON.stringify(s)), u.append("type", a), u.append("count", 1), u.append("rules", d),u.append("preOrder", d2), u.append("forms", JSON.stringify({})), u.append("fund", c), u.append("cupon", r),
+                    await je.post("/order/createcart", u) .then(function (response) {
+                        console.log(response.data);
 
-            //                         document.location.href = response.data.url;
-            //                     }
-            //                 }
+                        // var res = JSON.parse(response.data);
+                        if (response.data.ok == 'TRUE') {
+                            if (response.data.redirect == 'yes') {
+                                // $('body').data('orderWait', 0);
+                                article.dataset.orderWait  = 0;
 
-            // if (response.data.error !== null) {
-            //     // $('body').data('orderWait', 0);
-            //        article.dataset.orderWait  = 0;
+                                document.location.href = response.data.url;
+                            }
+                        }
 
-            //     alert(response.data.error);
-            // }
+                        if (response.data.error !== null) {
+                            // $('body').data('orderWait', 0);
+                            article.dataset.orderWait  = 0;
+
+                            alert(response.data.error);
+                        }
 
 
-            // 		  })
-            //            }))
+                    })
+            }))
         }(),
         function() {
             const e = document.querySelectorAll(".btn-buy"),

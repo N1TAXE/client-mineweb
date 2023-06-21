@@ -39,7 +39,7 @@ header {
       height: 24px;
     }
     
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 1024px) {
       display: flex;
     }
   }
@@ -49,6 +49,7 @@ header {
       flex-direction: row;
       align-items: center;
       gap: 16px;
+      max-width: 300px;
       @media screen and (max-width: 780px) {
         padding: 0 32px;
       }
@@ -72,7 +73,9 @@ header {
     &-wrapper {
       width: 100%;
       height: 35px;
-      @media screen and (max-width: 780px) {
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 1024px) {
         display: none;
       }
     }
@@ -89,6 +92,10 @@ header {
     border: none;
 
     transition: color ease .3s;
+    
+    @media screen and (max-width: 1280px) {
+      font-size: 14px;
+    }
 
     &-input {
       &.hide {
@@ -107,7 +114,6 @@ header {
   }
 
   &__logotype {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,7 +134,7 @@ header {
     width: 100%;
     justify-content: flex-end;
     
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 1024px) {
       display: none;
     }
 

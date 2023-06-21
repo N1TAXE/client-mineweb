@@ -753,6 +753,16 @@ body {
   font-size: 64px;
   line-height: 64px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .main__products .products__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 @media screen and (max-width: 780px) {
   .main__products .products__header {
@@ -763,11 +773,7 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 32px;
-}
-@media screen and (max-width: 1024px) {
-  .main__products .products__topbar {
-    flex-direction: column;
-  }
+  flex-direction: column;
 }
 .main__products .products__categories {
   display: flex;
@@ -794,16 +800,9 @@ body {
   }
 }
 .main__products .products__categories li button.active {
-  font-size: 32px;
   color: #47CB6C;
 }
-@media screen and (max-width: 1024px) {
-  .main__products .products__categories li button.active {
-    font-size: 24px;
-  }
-}
 .main__products .products__categories li button:hover {
-  font-size: 32px;
   color: #47CB6C;
 }
 @media screen and (max-width: 1024px) {
@@ -901,29 +900,33 @@ body {
 }
 .main__products .products__list {
   display: none;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   grid-gap: 40px;
+  justify-items: center;
 }
-.main__products .products__list.open {
-  display: grid;
-}
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1380px) {
   .main__products .products__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1060px) {
   .main__products .products__list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 640px) {
   .main__products .products__list {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
+.main__products .products__list.open {
+  display: grid;
+}
 .main__products .products__list-item {
+  grid-column: 1 span;
+  -webkit-box-flex: 0;
+  max-width: 280px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -950,7 +953,6 @@ body {
 .main__products .products__list-item-image-wrapper {
   width: 100%;
   height: 100%;
-  background-image: url(https://wallpapers.com/images/featured/s2kxfahyg30sob8q.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -965,13 +967,13 @@ body {
 }
 .main__products .products__list-item-image .price {
   position: absolute;
-  bottom: -2px;
+  bottom: -5px;
   right: -2px;
   z-index: 1;
   color: white;
   font-family: "DrukWide", sans-serif;
-  font-size: 46px;
-  line-height: 40px;
+  font-size: 32px;
+  line-height: 32px;
 }
 @media screen and (max-width: 780px) {
   .main__products .products__list-item-image .price {
@@ -989,7 +991,7 @@ body {
   text-transform: uppercase;
   color: #1B1C1F;
   font-size: 32px;
-  line-height: 24px;
+  line-height: 32px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1041,6 +1043,9 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+.main__products .products__more .icn {
+  fill: #47CB6C;
 }
 
 .product__details {
@@ -1138,6 +1143,15 @@ body {
   line-height: 150%;
   overflow-y: auto;
 }
+.product__details-desc::-webkit-scrollbar {
+  background: none;
+  width: 4px;
+}
+.product__details-desc::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  width: 4px;
+  border-radius: 8px;
+}
 .product__details-tabs {
   display: flex;
   align-items: center;
@@ -1184,10 +1198,18 @@ body {
 .product__page {
   background-image: url(../images/product_page_bg.png);
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
 }
 @media screen and (max-width: 780px) {
   .product__page {
-    background-position: 0px -345px;
+    background-size: 200%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .product__page {
+    background-position: 100% -32vh;
+    background-size: 100%;
   }
 }
 .product__page-body {
@@ -1385,7 +1407,7 @@ header.show .header__logotype svg path:last-child {
   width: 24px;
   height: 24px;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1024px) {
   .header__mobile-menu {
     display: flex;
   }
@@ -1407,6 +1429,7 @@ header.show .header__logotype svg path:last-child {
   flex-direction: row;
   align-items: center;
   gap: 16px;
+  max-width: 300px;
 }
 @media screen and (max-width: 780px) {
   .header__search-input {
@@ -1431,10 +1454,17 @@ header.show .header__logotype svg path:last-child {
 .header__search-wrapper {
   width: 100%;
   height: 35px;
+  display: flex;
+  align-items: center;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1024px) {
   .header__search-wrapper {
     display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header__search {
+    font-size: 14px;
   }
 }
 .header__search-input.hide {
@@ -1447,7 +1477,6 @@ header.show .header__logotype svg path:last-child {
   fill: #47CB6C;
 }
 .header__logotype {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1466,7 +1495,7 @@ header.show .header__logotype svg path:last-child {
   width: 100%;
   justify-content: flex-end;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1024px) {
   .header__nav {
     display: none;
   }
@@ -1496,7 +1525,7 @@ header.show .header__logotype svg path:last-child {
 footer {
   background-image: url(../images/footer__bg.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: top center;
   background-color: #040510;
 }
 footer .footer__wrapper {
@@ -1509,7 +1538,7 @@ footer .footer__wrapper {
 }
 @media screen and (max-width: 1024px) {
   footer .footer__wrapper {
-    padding-top: 124px;
+    padding-top: 228px;
   }
 }
 footer .footer__wrapper span {
@@ -2367,7 +2396,7 @@ footer .footer__header .icn {
   transform: rotate(45deg) translate(0, 50%);
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1024px) {
   .menu-icon {
     display: flex;
   }
